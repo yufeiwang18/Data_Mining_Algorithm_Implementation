@@ -1,0 +1,16 @@
+Hierarchical Clustering
+
+Your algorithm should also keep track of the merging process: for each merging step, remember which clusters are merged to produce which new cluster. Such information is similar to a dendrogram (e.g., shown below), except that dendrogram also remembers the distance of two clusters when they are merged.
+
+With the above information, your algorithm can then allow users to specify a desired number of clusters k, and returns k clusters based on the clustering result. For example, to produce two clusters, the algorithm can simply return the last two clusters that were merged during the process.
+
+*your algorithm should implement a lazy removal strategy: entries for merged clusters are not removed until they show up in the root of the queue. When such entries are found at the root during the ExactMin operation, they are simply ignored,
+
+Input data format:
+5.1,3.5,1.4,0.2,Iris-setosa4.9,3.0,1.4,0.2,Iris-setosa
+
+Output format:
+Cluster 1: [3, 10, 13, …]Cluster 2: [8, 52, 87, 88, …]Cluster 3: [100, 105, …]
+
+Format of execution
+$python hclust.py iris.dat 3
